@@ -14,22 +14,18 @@ import static lombok.AccessLevel.PROTECTED;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@FieldDefaults(level = PROTECTED)
 @Data
 public abstract class AbstractEntity {
 
-    @Id
+    private @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
 
-    @CreatedDate
+    private @CreatedDate
     @Temporal(TIMESTAMP)
-    @Column(name = "created_date", updatable = false, nullable = false)
-    LocalDateTime createdDate;
+    @Column(name = "created_date", updatable = false, nullable = false) LocalDateTime createdDate;
 
-    @LastModifiedDate
+    private @LastModifiedDate
     @Temporal(TIMESTAMP)
-    @Column(name = "last_modified_date", nullable = false)
-    LocalDateTime lastModifiedDate;
+    @Column(name = "last_modified_date", nullable = false) LocalDateTime lastModifiedDate;
 }
