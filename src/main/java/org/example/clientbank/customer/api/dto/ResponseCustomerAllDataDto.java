@@ -15,24 +15,24 @@ import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@FieldDefaults(level = PRIVATE)
+
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @Data
 public class ResponseCustomerAllDataDto extends AbstractDto {
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     Long id;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String name;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String email;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     Integer age;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String phone;
 
     @JsonView(View.Admin.class)

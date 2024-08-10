@@ -12,24 +12,23 @@ import java.time.LocalDateTime;
 import static lombok.AccessLevel.PRIVATE;
 
 
-@FieldDefaults(level = PRIVATE)
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @Data
 public class ResponseCustomerDto extends AbstractDto {
-    @JsonView(View.Base.class)
+    private @JsonView(View.Base.class)
     Long id;
 
-    @JsonView(View.Base.class)
+    private @JsonView(View.Base.class)
     String name;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String email;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     Integer age;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String phone;
 
     @JsonView(View.Admin.class)

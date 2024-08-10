@@ -8,15 +8,15 @@ import lombok.experimental.FieldDefaults;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@FieldDefaults(level = PRIVATE)
+
 @EqualsAndHashCode
 @AllArgsConstructor
 @Data
 public class RequestPatchEmployerDto {
 
-    @Size(min = 3, max = 100, message = "Name must be between 3 and 100 characters")
+    private @Size(min = 3, max = 100, message = "Name must be between 3 and 100 characters")
     String name;
 
-    @Size(min = 3, max = 100, message = "Address must be between 3 and 100 characters")
+    private @Size(min = 3, max = 100, message = "Address must be between 3 and 100 characters")
     String address;
 }

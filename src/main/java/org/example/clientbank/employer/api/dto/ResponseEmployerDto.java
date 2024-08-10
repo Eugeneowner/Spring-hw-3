@@ -10,21 +10,13 @@ import org.example.clientbank.dto.AbstractDto;
 
 import static lombok.AccessLevel.PRIVATE;
 
-
-@FieldDefaults(level = PRIVATE)
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @Data
 public class ResponseEmployerDto extends AbstractDto {
-    @JsonView(View.Admin.class)
-    Long id;
+    private @JsonView(View.Admin.class) Long id;
 
-    @JsonView(View.Admin.class)
-    String name;
+    private @JsonView(View.Admin.class) String name;
 
-    @JsonView(View.Admin.class)
-    String address;
-
-//    @JsonView(View.Admin.class)
-//    List<ResponseCustomerDto> customers;
+    private @JsonView(View.Admin.class) String address;
 }
