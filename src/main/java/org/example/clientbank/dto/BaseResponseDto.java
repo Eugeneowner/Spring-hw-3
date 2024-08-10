@@ -11,16 +11,16 @@ import org.example.clientbank.customer.api.dto.View;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@FieldDefaults(level = PRIVATE)
+
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class BaseResponseDto<T extends AbstractDto> {
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     T dto;
 
-    @JsonView(View.Admin.class)
+    private @JsonView(View.Admin.class)
     String message;
 }

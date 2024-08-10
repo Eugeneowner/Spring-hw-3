@@ -22,7 +22,7 @@ import javax.security.auth.login.AccountNotFoundException;
 @CrossOrigin(origins = {
         "http://localhost:3000",
         "http://localhost:3001",
-        "https://client-bank-front-end.vercel.app"
+        "https://client-bank-front.vercel.app/"
 }, allowedHeaders = "*")
 @RequiredArgsConstructor
 public class AccountController {
